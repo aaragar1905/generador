@@ -50,8 +50,15 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
         }
         #publicidad img {
-            width: 100%;
+            width: 80%; /* Ajustar el tamaño de la imagen */
+            max-width: 300px; /* Tamaño máximo de la imagen */
+            height: auto; /* Mantener la proporción */
             border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+            transition: transform 0.3s ease-in-out; /* Efecto de animación */
+        }
+        #publicidad img:hover {
+            transform: scale(1.1); /* Aumentar el tamaño de la imagen al pasar el ratón */
         }
     </style>
 </head>
