@@ -63,7 +63,7 @@
     </style>
 </head>
 <body>
-    <h1>😂 Bienvenido al Generador de Insultos Shitpost Andaluz 😂</h1>
+    <h1>😂 Bienvenido al Generador de Insultos 😂</h1>
     <p>Introduce tu nombre y prepárate 💥:</p>
     <input type="text" id="nombre" placeholder="Pon tu nombre, prro">
     <button onclick="mostrarMensaje()">🔥 Recibir insulto 🔥</button>
@@ -79,7 +79,7 @@
 
             // Si no hay nombre, se muestra un mensaje de error
             if (!nombre) {
-                mensajeElemento.textContent = "Ni siquiera puedes escribir bien tu nombre? 🙄";
+                mensajeElemento.textContent = "Ni siquiera puedes escribir bien tu nombre?";
                 return;
             }
 
@@ -129,7 +129,7 @@
                 // Generar una probabilidad de 5% para el insulto raro
                 let mensajeAleatorio;
                 if (Math.random() < 0.05) {
-                    mensajeAleatorio = `Eduardo 👍`; // Insulto raro
+                    mensajeAleatorio = `Eduardo Shiny 👍`; // Insulto raro
                 } else {
                     mensajeAleatorio = mensajes[Math.floor(Math.random() * mensajes.length)];
                 }
