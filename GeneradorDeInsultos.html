@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Insultos Shitpost Andaluz</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input {
+            width: 200px;
+            text-align: center;
+            background-color: #333;
+            color: #f0f0f0;
+            border: 3px dashed #ffcc00;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: rotate(360deg) scale(1.5);
+        }
+        #mensaje {
+            font-size: 30px;
+            margin-top: 20px;
+            font-weight: bold;
+            text-shadow: 5px 5px 10px black;
+        }
+        #publicidad {
+            margin-top: 50px;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        #publicidad img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>😂 Bienvenido al Generador de Insultos Shitpost Andaluz 😂</h1>
+    <p>Introduce tu nombre y prepárate 💥:</p>
+    <input type="text" id="nombre" placeholder="Pon tu nombre, prro">
+    <button onclick="mostrarMensaje()">🔥 Recibir insulto 🔥</button>
+    <p id="mensaje"></p>
+    <audio id="sonido" src="https://www.myinstants.com/media/sounds/vine-boom.mp3"></audio>
+
+    <script>
+        // Función que genera el insulto, ahora utilizando el nombre
+        function mostrarMensaje() {
+            const nombre = document.getElementById("nombre").value;
+            const mensajeElemento = document.getElementById("mensaje");
+            const sonido = document.getElementById("sonido");
+
+            // Si no hay nombre, se muestra un mensaje de error
+            if (!nombre) {
+                mensajeElemento.textContent = "Ni siquiera puedes escribir bien tu nombre? 🙄";
+                return;
+            }
+
+            // Mensaje de carga
+            mensajeElemento.textContent = "💀 Cargando insulto... 💀";
+            sonido.play();
+
+            setTimeout(() => {
+                // Lista de insultos con la variable 'nombre' incluida
+                const mensajes = [
+                    `${nombre}, eres más lento que renfe. 🚂`,
+                    `${nombre}, pareces más perdido que un pollo sin cabeza en la feria de Sevilla. 🐔🎉`,
+                    `${nombre}, tienes menos salero que un pollo sin pimentón. 🍗`,
+                    `${nombre}, eres más tonto que un burro bailando sevillanas. 🐴💃`,
+                    `${nombre}, tu cerebro está más oxidado que una moto de 2ª mano de Matalascañas. 🏍️`,
+                    `${nombre}, eres más flojo que una cuerda de guitarra rota. 🎸`,
+                    `${nombre}, si fueras un plato, serías una tortilla sin cebolla y sin sabor. 🍳`,
+                    `${nombre}, tu vida es más triste que la cabalgata de Reyes sin caramelos. 🎠`,
+                    `${nombre}, eres más cansao que un perro en pleno agosto en el centro de Cádiz. 🐕☀️`,
+                    `${nombre}, te caes más que un flamenco con un pie torcido en la feria de Abril. 🦩`,
+                    `${nombre}, te ríes menos que un "guiri" intentando bailar flamenco. 😂💃`,
+                    `${nombre}, eres más inútil que el wifi de la playa de Punta Umbría. 📶`,
+                    `${nombre}, si fueras una tapa, serías un "pan con tomate" sin tomate. 🍞`,
+                    `${nombre}, eres más seco que una empanadilla del Mercadona. 🥐`,
+                    `${nombre}, tienes menos luz que un candil de aceite en la oscuridad. 🕯️`,
+                    `${nombre}, eres como un pestiño mal hecho: empalagoso y nada bueno. 🍰`,
+                    `${nombre}, pareces más perdido que el sevillano que intenta aparcar en Ronda. 🚗`,
+                    `${nombre}, tienes menos carisma que un pez de las marismas de Doñana. 🐟`,
+                    `${nombre}, eres como un "pescaito frito" que no sabe freírse. 🐟🍋`,
+                    `${nombre}, no tienes ni la mitad de gracia de un chiste de Paco el del bar. 🍻`,
+                    `${nombre}, eres más corto que un churro sin azúcar. 🍩`,
+                    `${nombre}, si fueras un plato típico de Andalucía, serías "puchero" sin puchero. 🍲`,
+                    `${nombre}, tienes menos futuro que el sol en una noche sin luna. 🌙`,
+                    `${nombre}, tu sentido común es más inalcanzable que el sol en la Sierra de Huelva. 🌞`,
+                    `${nombre}, eres más desconectao que un wifi en un cortijo. 📡`,
+                    `${nombre}, tienes menos sal que una patata frita sin aceite. 🍟`,
+                    `${nombre}, eres más predecible que la playlist de "La Copla" en la feria. 🎶`,
+                    `${nombre}, si fueras una persona conocida, serías "el primo de Rajoy" después de un mal día. 🧑‍💼`,
+                    `${nombre}, te caes más que una bicicleta de tres ruedas en un charco de la Alhambra. 🚲💧`,
+                    `${nombre}, eres más pesado que el calor de un agosto en Sevilla. 🌞🔥`,
+                    `${nombre}, si fueras un meme, serías uno de esos "como no entiendo andaluz" del TikTok. 😂📱`,
+                    `${nombre}, no entiendes ni lo que es "la gracia" de los memes de "El Pantomima Full". 🤡`,
+                    `${nombre}, eres más torpe que el tonto del pueblo intentando bailar flamenco. 💃`,
+                    `${nombre}, eres como un "pavo real" sin plumas. 🦚`
+                ];
+
+                // Generar una probabilidad de 5% para el insulto raro
+                let mensajeAleatorio;
+                if (Math.random() < 0.05) {
+                    mensajeAleatorio = `Eduardo 👍`; // Insulto raro
+                } else {
+                    mensajeAleatorio = mensajes[Math.floor(Math.random() * mensajes.length)];
+                }
+
+                mensajeElemento.textContent = `😂 ${mensajeAleatorio}`;
+                sonido.play();
+            }, 3000);
+        }
+    </script>
+
+    <!-- Apartado de Publicidad -->
+    <div id="publicidad">
+        <h2>🔥 ¡Echa un vistazo a estos productos de Amazon! 🔥</h2>
+        <a href="https://www.amazon.com/dp/B08K8J6N6Q?tag=tu_afiliado_123" target="_blank">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71yDgsF7+gL._AC_SL1500_.jpg" alt="Publicidad Amazon">
+        </a>
+    </div>
+</body>
+</html>
